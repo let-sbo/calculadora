@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.calculadora{
+    background-color: rgb(8, 8, 29);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.decora{
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    background: linear-gradient(-45deg,red,yellow);
+    position: absolute;
+    bottom:2%;
+    right: 20%;
+}
+.decore{
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    background: linear-gradient(-45deg,rgb(43, 255, 0),rgb(0, 47, 255));
+    position: absolute;
+    top: 2%;
+    left: 10%;
+}
+.calc_cont{
+    width: 40vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255,.15);
+    border: 2px solid rgba(255, 255, 255, 0.432);
+    backdrop-filter:blur(10px);
+}
+.pantalla{
+    width: 90%;
+    height: 15%;
+    border: 1px solid rgba(255, 255, 255, 0.253);
+    margin-bottom: 5%;
+    overflow-x:hidden;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.pantalla h3{
+    opacity: .7;
+}
+.botones{
+    width: 90%;
+    height: 75%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap: 5px;
+}
+
+.numero{
+    background-color: rgba(255, 255, 255, 0.123);
+    border: 1px solid rgba(255, 255, 255, 0.158);
+    backdrop-filter: blur(10px);
+}
+.numero:hover{
+    background: rgba(255, 255, 255, 0.301);
+}
+.operacion{
+    background-color: rgba(0, 0, 0, 0.199);
+    border:1px solid rgba(0,0,0,.5);
+}
+.operacion:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+button{
+    transition: .2s background;
+    color: #fff;
+    font-weight:bolder ;
+}
+@media screen and (min-width:1000px) {
+    .calc_cont{
+        width: 30%;
+    }
+    .decora{
+        right: 30%;
+    }
+    .decore{
+        left: 50%;
+    }
+}
